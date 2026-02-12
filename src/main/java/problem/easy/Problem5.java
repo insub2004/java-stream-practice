@@ -11,7 +11,10 @@ public class Problem5 {
      * @return 연결된 문자열
      */
     public static String concatenateStrings(List<String> strings) {
-        // 여기에 코드 작성
-        return "";
+
+        // 중간 연산 : reduce 사용했던거 생각해서 초기값을 "" 주고 안에 있는걸 누적해서 합치는 식으로
+
+        return strings.stream()
+                .reduce("", String::concat);
     }
 }
