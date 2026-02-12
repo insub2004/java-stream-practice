@@ -11,7 +11,11 @@ public class Problem6 {
      * @return 중복 없는 정수 리스트
      */
     public static List<Integer> removeDuplicates(List<Integer> numbers) {
-        // 여기에 코드 작성
-        return null;
+
+        // 중복값은 제외 후 유일값만 포함
+
+        return numbers.stream()
+                .distinct()
+                .toList();
     }
 }
