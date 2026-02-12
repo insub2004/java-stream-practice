@@ -13,7 +13,12 @@ public class Problem4 {
      * @return 리스트의 최대값
      */
     public static OptionalInt findMax(List<Integer> numbers) {
-        // 여기에 코드 작성
-        return OptionalInt.empty();
+
+        // 중간 연산 : int 값으로 변환
+        // 최종 연산 : 최댓값 찾기
+
+        return numbers.stream()
+                .mapToInt(Integer::intValue)
+                .max();
     }
 }
